@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head >
+    <meta charset="UTF-8" >
+    <title >Title</title >
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/userdata.css"/>
+    <script type="text/javascript" src="/js/userdata.js"></script>
+</head >
+<body >
+<!-- <style>
+  body{
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+    background-color: rgb(198, 229, 247);
+  }
+  th{
+    width: 400px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: rgb(123, 204, 204);
+  }
+  td{
+    width: 400px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: aqua;
+  }
+
+</style> -->
+
+<form th:action="@{/Useraccount}" method="get">
+  <h1>ユーザーデータ</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>Telefone</th>
+        <th>password</th>
+        <th>sex</th>  
+        <th>date</th>
+        <th>maried</th>
+        <th>acction</th>
+      </tr>
+      <tr th:each="a : ${a}">
+        <td><span th:text="${a.id}"></span></td>
+        <td><span th:text="${a.name}"></span></td>
+        <td><span th:text="${a.telefone}"></span></td>
+        <td><span th:text="${a.password}"></span></td>
+        <td><span th:text="${a.sex}"></span></td>
+        <td><span th:text="${a.date}"></span></td>
+        <td><span th:text="${a.maried}"></span></td>
+        <td><a class="btn" th:href="@{/userdata/{id}(id=${a.id})}">削除</a></td>
+      </tr>
+    </table>
+</form>
+<form th:action="@{/login}" method="get"><button href="/login" id ="login">loginに戻す</button></form>
+<div id="rm">
+  <h1><span th:text="${name}"></span>のアカウントを削除しますか</h1>
+  <a id="a" href="@{/userdata}">決定</a>
+</div>
+</body >
+</html >

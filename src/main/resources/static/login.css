@@ -1,0 +1,81 @@
+body{
+        background-color: rgb(250, 250, 250);
+    }
+    #box2{
+        width: 300px;
+        height: auto;
+        border: 2px solid rgb(176, 170, 170);
+        margin: 50px auto;
+        background-color: white;
+    }
+    #msg{
+		text-align: center;
+		color: red;
+		margin: 0;
+		padding: 0;
+	}
+    #box2 h1{
+        margin-left: 10px;
+        margin-top: 40px;
+        font-weight: normal;
+    }
+    #box2 p{
+        margin-left: 10px;
+    }
+    input[type=input]{
+        margin-left : 21px;
+    }
+    input{
+        width: 200px;
+    }
+    button{
+        margin: 10px 10px;
+        width: 280px;
+        background-image: -webkit-linear-gradient(rgb(238, 222, 192) 1.01%,rgb(232, 170, 76),rgb(183, 145, 87) 100%);
+        border: none;
+    }
+    button:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    .str{
+        font-size: 14px;
+    }
+    span{
+        text-decoration: none;
+        color: blue;
+    }
+    span:hover{
+        text-decoration:underline;
+        color: rgb(159, 1, 1);
+    }
+    #box3{
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .char{
+        text-align: center;
+        font-size: 8px;
+        color: rgb(134, 134, 134);
+    }
+    .am{
+        background-image: -webkit-linear-gradient(rgb(255, 255, 255) 1.01%,rgb(159, 152, 152),rgb(144, 141, 135) 100%);
+        width: 300px;
+        margin: 0;
+    }
+    #userdata{
+        margin: 5px auto;
+        border: 1px solid black;
+        width: 410px;
+        position: relative;
+    }
+    #user{
+        width: 80px;
+        height: 80px;
+        background-image: -webkit-linear-gradient(rgb(125, 211, 245) 1.01%,rgb(56, 131, 141),rgb(129, 208, 222) 100%);
+        color: rgb(117, 40, 102);
+        position: absolute;
+        top: 70px;
+        left: 310px;
+    }

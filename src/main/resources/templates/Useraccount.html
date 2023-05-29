@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head >
+    <meta charset="UTF-8" >
+    <title >Title</title >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/Useraccount.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/Useraccount.js"></script>
+</head >
+<body >
+<!--<style>
+    body{
+        margin: 0 auto;
+        background-color: rgb(176, 210, 210);
+    }
+    #boxA{
+      margin: 0 auto;
+      width: 800px;
+      height: auto;
+      box-shadow: 5px;
+      background-color: #ebf2f6;
+      
+    }
+    h1{
+      width: 800px;
+      height: 50px;
+      color: brown;
+      text-align: center;
+      line-height: 100px;
+      padding: 10px 0;
+    }
+    .char{
+      width: 800px;
+      margin: 0;
+      padding: 0;
+      margin: 20px;
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
+    .col1{
+      padding-left: 113px;
+    }
+    .col2{
+      padding-left: 41px;
+    }
+    .col4{
+      padding-left: 98px;
+    }
+    .col5{
+      padding-left: 48px;
+    }
+    .col6{
+      padding-left: 72px;
+    }
+    span{
+      color: red;
+      padding-left: 29px;
+    }
+    button{
+      padding: 5px 20px ;
+      margin: 0 30px 20px 50px;
+      font-size: 15px;
+      background-image: -webkit-linear-gradient(rgb(255, 255, 255) 1.01%,rgb(159, 152, 152),rgb(144, 141, 135) 100%);
+      border: 40px; 
+    }
+    button:hover{
+      opacity: 0.8;      
+    }
+    #login{
+	margin-left: 370px;
+}
+</style>-->
+<form th:action="@{/Useraccount}" th:if="user" method="get">
+    <div id="boxA">
+        <h1 th:text="${msg}" id="msg"></h1>
+        <p class="char">ID:<span th:text="${name}" class="col1"></span></p>
+        <p class="char">携帯電話:<span th:text="${telefone}" class="col2"></span></p>
+        <p class="char">password:<span th:text="${password}" class="col3"></span></p>
+        <p class="char">性別:<span th:text="${sex}" class="col4"></span></p>    
+        <p class="char">生年月日:<span th:text="${date}" class="col5"></span></p>     
+        <p class="char">配偶者:<span th:text="${maried}" class="col6"></span></p>
+  </div>
+</form>
+<form th:action="@{/login}" method="get"><button href="/login" id ="login">loginに戻す</button></form>
+<button id="pass" href="@/{passchange}"> パスワード変更 </button>
+<form th:action="@{/passchange}" id="passchange" method="post">
+  <h2>ID: <span th:text="${name}" class="rg"></span></h2>
+  <h3 th:text="${information}"></h3>
+  <p class="rg1">新しいパスワード<input type="password" name="password"></p>
+
+  <button type="submit">パスワード変更</button>
+</form>
+
+
+</body >
+</html >

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head >
+    <meta charset="UTF-8" >
+    <title >Title</title >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/signup.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head >
+<body >
+<div th:if="${msg}">
+  <h1 th:text="${msg}"></h1>
+</div>
+<style>
+    body{
+        width: 300px;
+        height: 650px;
+        margin: 0 auto;
+    }
+    #box2{
+        border:  solid rgb(100, 95, 95) 0.5px ; 
+        width: 300px;
+        height: 580px;
+        margin-top: 50px;
+    }
+    .str{
+        font-weight: bolder;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    input{
+        margin-left: 10px;
+        width: 272px;
+        border: 0.2;
+    }
+    input[type=input]:focus {
+    background-color: rgb(206, 227, 234);
+    border: 3px solid rgb(237, 193, 111);
+    
+    }
+    span{
+        margin-left: 36px;
+        font-size: 10px;
+    }
+    h1{
+        font-weight: normal;
+        font-size: 26px;
+        color: red;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        font-weight: normal;
+        margin-left: 15px;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .change{
+        margin: 10px 10px;
+        width: 280px;
+        background-image: -webkit-linear-gradient(rgb(238, 222, 192) 1.01%,rgb(232, 170, 76),rgb(183, 145, 87) 100%);
+        border: none;
+    }
+    button:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    .char{
+        font-size: 10.5px;
+        width: 280px;
+        margin: 6px 10px 0 10px;
+        height: 60px;
+        border-bottom: 1px solid rgb(98, 95, 95)  ;
+        
+    }   
+    .char a{
+        text-decoration: none;
+    }
+    .char a:hover{
+        text-decoration:underline;
+        color: rgb(159, 1, 1);
+    }
+    .text{
+        font-size: 10.5px;
+        width: 280px;
+        margin: 6px 10px 0 10px;
+        
+    }   
+    .text a{
+        text-decoration: none;
+    }
+    .text a:hover{
+        text-decoration:underline;
+        color: rgb(159, 1, 1);
+    }
+    .action{
+		display:block;
+}
+    .action p,.action input,.action label,p{
+        margin: 0 0 0 10px;
+        display: inline-block;
+    }
+    .action label{
+        width: auto;
+        height: auto;
+        margin: 5px 0 0 10px;
+    }
+    .action input{
+        width: auto;
+	        height: auto;
+	    }
+    .date{
+		width:auto;
+}
+    #date{
+        width: 120px;
+        margin: 10px 0;
+    }
+    #spouse-select{
+		margin-left: 10px;	
+}
+</style>
+<form th:action="@{/signup}" method="post">
+<div id="box2">
+    <h2>アカウントを作成</h2>
+    <p class="str">指名</p>
+    <input type="input"  id="name" name="name" placeholder="氏名（例：アマゾン太郎）">
+    <p class="str">携帯電話番号またはメールアドレス</p>
+    <input type="input" name="telefone" >
+    <p class="str">パスワード</p>
+    <input type="password" name="password" placeholder="最低6文字必要です" id="">
+    <span>
+    パスワードは最低6文字ありますか？</span>
+    <div >
+    
+     <p class="action">性別:   
+     <label for="男">男<input type="radio" id="男" name="sex" value="男"></label>
+     <label for="女">女<input type="radio" id="女" name="sex" value="女"></label>
+     </p>
+    </div>
+    <p class="date">生年月日</p>
+    <input type="date" name="date" id="date"><br>
+    <label for="spouse-select" id="spouse-select">配偶者:</label>
+
+	<select name="maried" id="spouse-select">
+    	<option value=""></option>
+    	<option value="有り">有り</option>
+ 	  	<option value="無し">無し</option>
+	</select>
+    <button type="submit" class="change">次に進む</button>
+    <p class="char"> <a href="">利用規約</a>と <a>プライバシー規約</a> に同意いただける場合はアカウントを作成してください。</p> 
+    <p class="text">すでにアカウントをお持ちですか？ <a href="/login">サインイン</a> 
+    	お仕事のための物品購入ですか？ <a href="#"> 無料のビジネスアカウントを作成</a></p>
+</div>
+</form>
+</body >
+</html >

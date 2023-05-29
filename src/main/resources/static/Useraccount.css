@@ -1,0 +1,133 @@
+body{
+	margin: 0 auto;
+  background-color: rgb(176, 210, 210);
+   position: relative;
+}
+#boxA{
+  margin: 0 auto;
+  width: 800px;
+  height: auto;
+  box-shadow: 5px;
+  background-color: #ebf2f6;
+}
+h1{
+  width: 800px;
+  height: 50px;
+  color: brown;
+  text-align: center;
+  line-height: 100px;
+  padding: 10px 0;
+}
+.char{
+  width: 800px;
+  margin: 0;
+  padding: 0;
+  margin: 20px;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.col1{
+  padding-left: 113px;
+}
+.col2{
+  padding-left: 41px;
+}
+.col4{
+  padding-left: 98px;
+}
+.col5{
+  padding-left: 48px;
+}
+.col6{
+  padding-left: 72px;
+}
+span{
+  color: red;
+  padding-left: 29px;
+}
+button{
+  padding: 5px 20px ;
+  margin: 0 30px 20px 50px;
+  font-size: 15px;
+  background-image: -webkit-linear-gradient(rgb(255, 255, 255) 1.01%,rgb(159, 152, 152),rgb(144, 141, 135) 100%);
+  border: 40px; 
+}
+button:hover{
+  opacity: 0.8;      
+}
+#login{
+  position: absolute;
+	right: 65%;
+  bottom: -70px;
+}
+#pass{
+  position: absolute;
+  bottom: -70px;
+  right: 50%;
+}
+#passchange{
+  border: 2px solid;
+  display: none;
+  background-color: rgb(126, 148, 180);
+  z-index: 1;
+  position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:900px;
+	height:550px;
+}
+#passchange button{
+  margin-left: 33%;
+  width: 250px;
+  height: 60px;
+  font-size: 22px;
+}
+#passchange h2 {
+  color: brown;
+  font-size: 50px;
+}
+.rg{
+  padding-left: 113px;
+  color: #d7d0b9;
+}
+.rg1, .rg2{
+  font-size: 35px;
+  padding: 26px 0;
+  color: rgb(0 4 67);
+}
+.rg1 input{
+  margin-left: 40px;
+  width: 400px;
+  height: 35px;
+}
+.rg2 input{
+  margin-left: 5px;
+  width: 400px;
+  height: 35px;
+}
+
+
+
+#bg{
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background:rgba(0, 0, 0, .5);
+  z-index: 0;
+}
+
+#photo{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:640px;
+	height:420px;
+}
